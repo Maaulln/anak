@@ -6,10 +6,11 @@ import './styles/tailwind.css';
 import { BrowserRouter } from "react-router-dom";
 import Cover from "./pages/Cover.jsx";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Cover />
+      <Cover   />
     </BrowserRouter>
   </React.StrictMode>
 );
