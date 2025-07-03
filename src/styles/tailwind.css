@@ -1,4 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 @import "tailwindcss";
+
+@theme{
+  --color-primary: #FF9149;
+  --color-secondary: #F4F4F4; 
+  --color-darkGray: #2D2D2D;
+  --color-linkBlue: #007BFF;
+  --color-grayLabel: #9E9E9E;
+  --color-grayPlaceholder: #808080;
+}
