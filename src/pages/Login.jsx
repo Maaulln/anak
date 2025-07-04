@@ -1,5 +1,5 @@
-import LoginForm from "../components/organisms/LoginForm";
-import logo from "../assets/img/logo-anak.jpg";
+import LoginForm from "@/components/organisms/LoginForm";
+import logo from "@/assets/img/logo-anak.jpg";
 
 export default function Login() {
   return (

@@ -1,7 +1,7 @@
-import Logo from "../assets/img/Logo2.png"
-import G1 from "../assets/img/Componets-Cover/Group 1.svg"
-import Polygon4 from "../assets/img/Componets-Cover/Polygon 4.svg"
-import Polygon5 from "../assets/img/Componets-Cover/Polygon 5.svg"
+import Logo from "@/assets/img/Logo2.png"
+import G1 from "@/assets/img/Componets-Cover/Group 1.svg"
+import Polygon4 from "@/assets/img/Componets-Cover/Polygon 4.svg"
+import Polygon5 from "@/assets/img/Componets-Cover/Polygon 5.svg"
 
 
 export default function Cover({ fadeOut }) {

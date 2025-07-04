@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import { useState, useEffect } from "react";
-import ROUTES from "./routes/index.jsx";
-import Cover from "./pages/Cover.jsx";
+import ROUTES from "@/routes/index.jsx";
+import Cover from "@/pages/Cover.jsx";
 // import Register from "./pages/Register";
 // import Dashboard from "./pages/Dashboard";
 // import ProtectedRoute from "./routes/ProtectedRoute";
