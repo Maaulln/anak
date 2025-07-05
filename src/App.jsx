@@ -1,8 +1,13 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import { useState, useEffect } from "react";
+<<<<<<< HEAD
 import ROUTES from "@/routes/index.jsx";
 import Cover from "@/pages/Cover.jsx";
+=======
+import ROUTES from "./routes/index.jsx";
+import Cover from "./pages/Cover.jsx";
+>>>>>>> eccc7846e7d0e1126bc0d805a32f49733aa5e854
 // import Register from "./pages/Register";
 // import Dashboard from "./pages/Dashboard";
 // import ProtectedRoute from "./routes/ProtectedRoute";
@@ -22,7 +27,8 @@ export default function App() {
     return <Cover />;
   }
   return (
-    <Routes>
+    <div className="font-display">
+      <Routes>
       <Route path="/" element={<Navigate to={ROUTES.LOGIN} />} />
       <Route path={ROUTES.LOGIN} element={<Login />} />
       {/* <Route path="/register" element={<Register />} /> */}
@@ -33,5 +39,7 @@ export default function App() {
         } 
       /> */}
     </Routes>
+    </div>
+    
   );
 }

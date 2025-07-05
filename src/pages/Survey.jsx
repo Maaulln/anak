@@ -1,4 +1,5 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import ProgressBar from "@/components/layout/ProgesBar";
 import BoyImg from "@/assets/img/boy.png";
 import GirlImg from "@/assets/img/girl.png";
@@ -8,6 +9,14 @@ export default function Survey() {
   const [inputValue, setInputValue] = useState("");
   const [inputValue2, setInputValue2] = useState("");
   const [inputValue3, setInputValue3] = useState("");
+=======
+import ProgressBar from "../components/layout/ProgesBar";
+import BoyImg from "../assets/img/boy.png";
+import GirlImg from "../assets/img/girl.png";
+
+export default function Survey() {
+  const [inputValue, setInputValue] = useState("");
+>>>>>>> eccc7846e7d0e1126bc0d805a32f49733aa5e854
   const questions = [
     {
       question: "Apa gender dan siapa nama anak anda..?",
@@ -98,7 +107,11 @@ export default function Survey() {
                   onClick={() => handleSelect("laki")}
                   className={`flex flex-col items-center border rounded-lg p-2 transition ${
                     answers[0] === "laki"
+<<<<<<< HEAD
                       ? "border-primary bg-blue-500"
+=======
+                      ? "border-primary bg-blue-50"
+>>>>>>> eccc7846e7d0e1126bc0d805a32f49733aa5e854
                       : "border-gray-300 bg-white"
                   }`}
                 >
@@ -110,7 +123,11 @@ export default function Survey() {
                   onClick={() => handleSelect("perempuan")}
                   className={`flex flex-col items-center border rounded-lg p-2 transition ${
                     answers[0] === "perempuan"
+<<<<<<< HEAD
                       ? "border-primary bg-pink-500"
+=======
+                      ? "border-primary bg-pink-200"
+>>>>>>> eccc7846e7d0e1126bc0d805a32f49733aa5e854
                       : "border-gray-300 bg-white"
                   }`}
                 >
@@ -145,18 +162,30 @@ export default function Survey() {
             <input
               type="text"
               placeholder="Lainya"
+<<<<<<< HEAD
               className="w-full px-4 py-2 bg-secondary border-1 border-primary rounded-2xl mt-4"
               value={inputValue2}
               onChange={(e) => setInputValue2(e.target.value)}
+=======
+              className="w-full px-4 py-2 bg-secondary border-1 border-primary rounded mt-4"
+              value={useState}
+              onChange={(e) => setInputValue(e.target.value)}
+>>>>>>> eccc7846e7d0e1126bc0d805a32f49733aa5e854
             />
           )}
           {currentStep === 3 && (
             <input
               type="text"
               placeholder="Lainya"
+<<<<<<< HEAD
               className="w-full px-4 py-2 bg-secondary border-1 border-primary rounded-2xl mt-4"
               value={inputValue3}
               onChange={(e) => setInputValue3(e.target.value)}
+=======
+              className="w-full px-4 py-2 bg-secondary border-1 border-primary rounded mt-4"
+              value={useState}
+              onChange={(e) => setInputValue(e.target.value)}
+>>>>>>> eccc7846e7d0e1126bc0d805a32f49733aa5e854
             />
           )}
         </div>
@@ -185,9 +214,15 @@ export default function Survey() {
       </div>
 
       {/* debug answers */}
+<<<<<<< HEAD
       {/* <pre className="mt-4 text-xs bg-gray-100 p-2 rounded">
         {JSON.stringify({ ...answers, namaAnak: inputValue }, null, 2)}
       </pre> */}
+=======
+      <pre className="mt-4 text-xs bg-gray-100 p-2 rounded">
+        {JSON.stringify({ ...answers, namaAnak: inputValue }, null, 2)}
+      </pre>
+>>>>>>> eccc7846e7d0e1126bc0d805a32f49733aa5e854
     </div>
   );
 }
