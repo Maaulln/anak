@@ -3,7 +3,7 @@ export default function Progress({ currentStep, totalSteps }) {
   return (
     <div className="w-full h-3 bg-bar rounded-full overflow-hidden mb-4">
       <div
-        className="h-full bg-primary transition-all duration-500"
+        className="h-full bg-orangePrimary transition-all duration-500"
         style={{ width: `${progress}%` }}
       ></div>
     </div>
