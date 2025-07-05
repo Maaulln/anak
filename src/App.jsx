@@ -22,7 +22,8 @@ export default function App() {
     return <Cover />;
   }
   return (
-    <Routes>
+    <div className="font-display">
+      <Routes>
       <Route path="/" element={<Navigate to={ROUTES.LOGIN} />} />
       <Route path={ROUTES.LOGIN} element={<Login />} />
       {/* <Route path="/register" element={<Register />} /> */}
@@ -33,5 +34,7 @@ export default function App() {
         } 
       /> */}
     </Routes>
+    </div>
+    
   );
 }
