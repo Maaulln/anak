@@ -4,8 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "@/App.jsx";
 import '@/styles/tailwind.css';
 import { BrowserRouter } from "react-router-dom";
-import Survey from "@/pages/Survey.jsx";
-
+import Dashboard from "@/pages/Dashboard.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
