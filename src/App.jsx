@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import { useState, useEffect } from "react";
 import ROUTES from "@/routes/index.jsx";
 import Cover from "@/pages/Cover.jsx";
+import ChatBot from "./pages/ChatBot";
 // import Register from "./pages/Register";
 // import Dashboard from "./pages/Dashboard";
 // import ProtectedRoute from "./routes/ProtectedRoute";
@@ -26,6 +27,7 @@ export default function App() {
       <Routes>
       <Route path="/" element={<Navigate to={ROUTES.LOGIN} />} />
       <Route path={ROUTES.LOGIN} element={<Login />} />
+      <Route path="/chatbot" element={<ChatBot />} />
       {/* <Route path="/register" element={<Register />} /> */}
       {/* <Route path="/dashboard" element={
           <ProtectedRoute>

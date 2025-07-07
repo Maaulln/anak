@@ -1,9 +1,13 @@
+import { useState } from "react";
+import Toggle from "../atoms/Toggle";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
 import InputPasswordWithToggle from "../molecules/InputPasswordWithToggle";
 import GoogleLoginButton from "../atoms/GoogleLoginButton";
 
 export default function LoginForm() {
+  const [rememberMe, setRememberMe] = useState(false);
+  
   return (
     <form className="space-y-5 w-full max-w-md">
       <div className="w-full">
@@ -15,12 +19,11 @@ export default function LoginForm() {
       
       <div className="flex items-center justify-between text-sm">
         <label className="flex items-center gap-3 cursor-pointer">
-          <div className="relative">
-            <input type="checkbox" className="sr-only peer" />
-            <div className="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-orangePrimary transition" />
-            <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-5" />
-          </div>
-          <span className="text-sm text-gray-700">Ingat saya</span>
+          <Toggle
+            checked={rememberMe}
+            onChange={(e) => setRememberMe(e.target.checked)}
+            label="Ingat saya"
+          />
         </label>
         <a href="#" className="text-linkBlue">Lupa password?</a>
       </div>
