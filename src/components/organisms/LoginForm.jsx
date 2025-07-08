@@ -18,7 +18,7 @@ export default function LoginForm() {
       <div className="w-full">
         <InputPasswordWithToggle placeholder="Masukkan password" />
       </div>
-      
+
       <div className="flex items-center justify-between text-sm">
         <label className="flex items-center gap-3 cursor-pointer">
           <Toggle
@@ -27,20 +27,29 @@ export default function LoginForm() {
             label="Ingat saya"
           />
         </label>
-        <a href="#" className="text-linkBlue">Lupa password?</a>
+        <a
+          href="#"
+          className="text-linkBlue"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/forgot-password");
+          }}
+        >
+          Lupa password?
+        </a>
       </div>
 
       <div className="w-full">
         {/* <Button className="bg-orangePrimary hover:bg-orangeSecondary"><a href="">masuk</a></Button> */}
         <Button
-    className="bg-orangePrimary hover:bg-orangeSecondary"
-    onClick={(e) => {
-      e.preventDefault();
-      navigate("/survey");
-    }}
-  >
-    masuk
-  </Button>
+          className="bg-orangePrimary hover:bg-orangeSecondary"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/survey");
+          }}
+        >
+          masuk
+        </Button>
       </div>
 
       <div className="flex items-center gap-2">
