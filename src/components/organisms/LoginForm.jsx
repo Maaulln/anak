@@ -22,6 +22,7 @@ export default function LoginForm() {
       <div className="flex items-center justify-between text-sm">
         <label className="flex items-center gap-3 cursor-pointer">
           <Toggle
+            className="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-linkBlue  transition"
             checked={rememberMe}
             onChange={(e) => setRememberMe(e.target.checked)}
             label="Ingat saya"
@@ -33,7 +34,7 @@ export default function LoginForm() {
       <div className="w-full">
         {/* <Button className="bg-orangePrimary hover:bg-orangeSecondary"><a href="">masuk</a></Button> */}
         <Button
-    className="bg-orangePrimary hover:bg-orangeSecondary"
+    className="bg-orangePrimary hover:bg-orangeSecondary cursor-pointer"
     onClick={(e) => {
       e.preventDefault();
       navigate("/survey");
