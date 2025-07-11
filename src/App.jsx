@@ -1,8 +1,11 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 import { useState, useEffect } from "react";
 import ROUTES from "@/routes/index.jsx";
 import Cover from "@/pages/Cover.jsx";
+import Home from "@/pages/Home.jsx";
 import ChatBot from "@/pages/ChatBot";
 import Survey from "@/pages/Survey.jsx";
 import Home from "@/pages/Home.jsx";
@@ -21,26 +24,27 @@ export default function App() {
     // Clear the timer if the component unmounts
     return () => clearTimeout(timer);
   }, []);
-  if(loading){
+  if (loading) {
     return <Cover />;
   }
   return (
     <div className="font-display">
       <Routes>
-      <Route path="/" element={<Navigate to={ROUTES.LOGIN} />} />
-      <Route path={ROUTES.LOGIN} element={<Login />} />
-      <Route path="/chatbot" element={<ChatBot />} />
-      <Route path="/survey" element={<Survey />} />
-      <Route path="/home" element={<Home />} />
-      {/* <Route path="/register" element={<Register />} /> */}
-      {/* <Route path="/dashboard" element={
+        <Route path="/" element={<Navigate to={ROUTES.LOGIN} />} />
+        <Route path={ROUTES.LOGIN} element={<Login />} />
+        <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />
+        <Route path={ROUTES.RESET_PASSWORD} element={<ResetPassword />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/chatbot" element={<ChatBot />} />
+        <Route path="/survey" element={<Survey />} />
+        {/* <Route path="/register" element={<Register />} /> */}
+        {/* <Route path="/dashboard" element={
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
         } 
       /> */}
-    </Routes>
+      </Routes>
     </div>
-    
   );
 }
