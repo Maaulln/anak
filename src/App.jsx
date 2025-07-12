@@ -6,6 +6,9 @@ import Cover from "@/pages/Cover.jsx";
 import ChatBot from "@/pages/ChatBot";
 import Survey from "@/pages/Survey.jsx";
 import Home from "@/pages/Home.jsx";
+import Konsultan from "@/pages/Konsultan.jsx";
+import Progres from "@/pages/Progres.jsx";
+import Profile from "@/pages/Profile.jsx";
 // import Register from "./pages/Register";
 // import Dashboard from "./pages/Dashboard";
 // import ProtectedRoute from "./routes/ProtectedRoute";
@@ -31,7 +34,10 @@ export default function App() {
       <Route path={ROUTES.LOGIN} element={<Login />} />
       <Route path="/chatbot" element={<ChatBot />} />
       <Route path="/survey" element={<Survey />} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/Konsultan" element={<Konsultan />} />
+      <Route path="/Progres" element={<Progres />} />
+      <Route path="/Profile" element={<Profile/>}/>
       {/* <Route path="/register" element={<Register />} /> */}
       {/* <Route path="/dashboard" element={
           <ProtectedRoute>
@@ -44,3 +50,4 @@ export default function App() {
     
   );
 }
+ 
