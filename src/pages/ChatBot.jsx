@@ -1,8 +1,8 @@
-import ChatHeader from "../components/organisms/ChatHeader";
-import ChatWindow from "../components/organisms/ChatWindow";
-import ChatInputBar from "../components/molecules/ChatInputBar";
-import ChatLayout from "../components/layout/ChatLayout";
-import Avatar from "../assets/img/bot.png";
+import ChatHeader from "@/components/organisms/ChatHeader";
+import ChatWindow from "@/components/organisms/ChatWindow";
+import ChatInputBar from "@/components/molecules/ChatInputBar";
+import ChatLayout from "@/components/layout/ChatLayout";
+import Avatar from "@/assets/img/bot.png";
 import { useState, useRef } from "react";
 
 export default function ChatBot() {

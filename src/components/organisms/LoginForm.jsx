@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Toggle from "../atoms/Toggle";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
@@ -9,6 +9,7 @@ import ROUTES from "../../routes/index";
 
 export default function LoginForm() {
   const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <form className="space-y-5 w-full max-w-md">
@@ -22,6 +23,7 @@ export default function LoginForm() {
       <div className="flex items-center justify-between text-sm">
         <label className="flex items-center gap-3 cursor-pointer">
           <Toggle
+            className="w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-linkBlue  transition"
             checked={rememberMe}
             onChange={(e) => setRememberMe(e.target.checked)}
             label="Ingat saya"
@@ -36,7 +38,13 @@ export default function LoginForm() {
       </div>
 
       <div className="w-full">
-        <Button className="bg-orangePrimary hover:bg-orangeSecondary">
+        <Button
+          className="bg-orangePrimary hover:bg-orangeSecondary cursor-pointer"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/survey");
+          }}
+        >
           Masuk
         </Button>
       </div>
