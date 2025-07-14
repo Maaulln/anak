@@ -49,7 +49,7 @@ export default function MainLayout({ children }) {
         }`}
         >
           <BarChart3 />
-          <span className="text-xs">Progress</span>
+          <span className="text-xs">Progres</span>
           </button>
           {/* Tab Profile */}
           <button
