@@ -1,4 +1,7 @@
 import React from 'react';
+import Avatar from "@/assets/img/avatar.png";
+import Avatar1 from "@/assets/img/avatar1.png";
+import Avatar2 from "@/assets/img/avatar2.png";
 
 // Komponen Test Card - Card biru untuk test utama
 export default function TestCard() {
@@ -17,18 +20,22 @@ export default function TestCard() {
           <div className="flex items-center space-x-4">
             {/* Score 84 */}
             <div className="flex items-center space-x-2">
-              <div className="bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">84</div>
               <div className="flex space-x-1">
                 {/* Emoji bisa diganti dengan icon jika perlu */}
-                <span>😊</span>
-                <span>😊</span>
-                <span>😊</span>
+                <img src={Avatar} alt="" className='w-7 h-7 bg-amber-50 rounded-full'/>
+                <img src={Avatar1} alt="" className='w-7 h-7 bg-amber-50 rounded-full'/>
+                <img src={Avatar2} alt="" className='w-7 h-7 bg-amber-50 rounded-full'/>
+                <span className='bg-[#FFD700] w-7 h-7 rounded-full flex items-center justify-center text-[0.8rem]'>4+</span>
               </div>
             </div>
 
             {/* Score 90 */}
-            <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">90</div>
-            <span className="text-sm">Nilai</span>
+            {/* <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">masuk</div> */}
+            <button
+              className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold absolute bottom-4 right-4 my-[-1rem] shadow-none drop-shadow-[0_6px_12px_rgba(251,146,60,0.5)] cursor-pointer transition duration-200 hover:scale-105"
+            >
+              Mulai
+            </button>
           </div>
         </div>
       </div>

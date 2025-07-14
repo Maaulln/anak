@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Progress from "../components/layout/ProgesBar";
 import BoyImg from "@/assets/img/boy.png";
 import GirlImg from "@/assets/img/girl.png";
 
@@ -120,6 +121,10 @@ export default function Survey() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      {/* Progress Bar */}
+      <div className="max-w-sm mx-auto pt-8">
+        <Progress currentStep={currentStep + 1} totalSteps={totalSteps} />
+      </div>
       {/* Content */}
       <div className="flex-1 px-6 py-8">
         <div className="max-w-sm mx-auto">

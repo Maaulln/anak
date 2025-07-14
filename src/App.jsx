@@ -8,7 +8,6 @@ import Cover from "@/pages/Cover.jsx";
 import Home from "@/pages/Home.jsx";
 import ChatBot from "@/pages/ChatBot";
 import Survey from "@/pages/Survey.jsx";
-import Home from "@/pages/Home.jsx";
 import Konsultan from "@/pages/Konsultan.jsx";
 import Progres from "@/pages/Progres.jsx";
 import Profile from "@/pages/Profile.jsx";

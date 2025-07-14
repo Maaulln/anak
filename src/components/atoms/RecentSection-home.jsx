@@ -58,7 +58,7 @@ export default function RecentSection() {
       ),
       bgColor: "bg-green-500",
       progressColor: "bg-green-500",
-      score: 100, // Motorik punya score khusus
+      // score: 100, // Motorik punya score khusus
       cardBg: "bg-green-100",
       shadow: "green"
     },
