@@ -21,7 +21,7 @@ export default function ChatBot() {
 
     try {
       const response = await fetch(
-        "https://maaulln.app.n8n.cloud/webhook-test/anak",
+        "https://maaulln.app.n8n.cloud/webhook/anak",
         {
           method: "POST",
           headers: {
