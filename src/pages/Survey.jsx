@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Progress from "../components/layout/ProgesBar";
+import { useNavigate } from "react-router-dom";
+import Progress from "@/components/layout/ProgesBar";
 import BoyImg from "@/assets/img/boy.png";
 import GirlImg from "@/assets/img/girl.png";
 
@@ -7,6 +8,7 @@ export default function Survey() {
   const [inputValue, setInputValue] = useState("");
   const [inputValue2, setInputValue2] = useState("");
   const [inputValue3, setInputValue3] = useState("");
+  const navigate = useNavigate();
   const questions = [
     {
       question: "Apa gender dan siapa nama anak anda..?",
@@ -104,6 +106,9 @@ export default function Survey() {
   const handleNext = () => {
     if (currentStep < totalSteps - 1) {
       setCurrentStep(currentStep + 1);
+    }else {
+      // Jika sudah di pertanyaan terakhir, redirect ke home
+      navigate("/home");
     }
   };
 
@@ -122,7 +127,7 @@ export default function Survey() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Progress Bar */}
-      <div className="max-w-sm mx-auto pt-8">
+      <div className="flex justify-center pt-8">
         <Progress currentStep={currentStep + 1} totalSteps={totalSteps} />
       </div>
       {/* Content */}
@@ -247,14 +252,12 @@ export default function Survey() {
           <button
             onClick={handleNext}
             className={`w-full py-4 rounded-2xl text-lg font-semibold transition-all ${
-              currentStep === totalSteps - 1 ||
               answers[currentStep] === "" ||
               (currentStep === 0 && inputValue.trim() === "")
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-orange-400 text-white hover:bg-orange-500"
             }`}
             disabled={
-              currentStep === totalSteps - 1 ||
               answers[currentStep] === "" ||
               (currentStep === 0 && inputValue.trim() === "")
             }

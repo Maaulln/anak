@@ -1,8 +1,6 @@
 import React from "react";
 import MainLayout from "@/components/layout/MainLayout";
 import { Search } from "lucide-react";
-import Avatar from "@/assets/img/avatar.png"
-import  IconSearch  from "@/assets/img/icon-search.svg";
 import Header from "@/components/atoms/header-home";
 import RecentSection from "../components/atoms/RecentSection-home";
 import TestCard from "@/components/atoms/TestCard-home";
