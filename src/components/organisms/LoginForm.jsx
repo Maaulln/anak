@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Toggle from "../atoms/Toggle";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
 import InputPasswordWithToggle from "../molecules/InputPasswordWithToggle";
 import GoogleLoginButton from "../atoms/GoogleLoginButton";
-import Survey from "@/pages/Survey";
+import ROUTES from "../../routes/index";
 
 export default function LoginForm() {
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
+
   return (
     <form className="space-y-5 w-full max-w-md">
       <div className="w-full">
@@ -28,29 +29,24 @@ export default function LoginForm() {
             label="Ingat saya"
           />
         </label>
-        <a
-          href="#"
-          className="text-linkBlue"
-          onClick={(e) => {
-            e.preventDefault();
-            navigate("/forgot-password");
-          }}
+        <Link
+          to={ROUTES.FORGOT_PASSWORD}
+          className="text-linkBlue hover:underline"
         >
           Lupa password?
-        </a>
+        </Link>
       </div>
 
       <div className="w-full">
-        {/* <Button className="bg-orangePrimary hover:bg-orangeSecondary"><a href="">masuk</a></Button> */}
         <Button
-    className="bg-orangePrimary hover:bg-orangeSecondary cursor-pointer"
-    onClick={(e) => {
-      e.preventDefault();
-      navigate("/survey");
-    }}
-  >
-    masuk
-  </Button>
+          className="bg-orangePrimary hover:bg-orangeSecondary cursor-pointer"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/survey");
+          }}
+        >
+          Masuk
+        </Button>
       </div>
 
       <div className="flex items-center gap-2">
