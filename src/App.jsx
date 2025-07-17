@@ -22,7 +22,7 @@ export default function App() {
     // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // 2 seconds
+    }, 1000); // 2 seconds
     // Clear the timer if the component unmounts
     return () => clearTimeout(timer);
   }, []);
@@ -40,6 +40,7 @@ export default function App() {
       <Route path="/Konsultan" element={<Konsultan />} />
       <Route path="/Progres" element={<Progres />} />
       <Route path="/Profile" element={<Profile/>}/>
+      <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />
       {/* <Route path="/register" element={<Register />} /> */}
       {/* <Route path="/dashboard" element={
           <ProtectedRoute>

@@ -178,7 +178,7 @@ export default function Survey() {
                     <div
                       className={`w-24 h-24 rounded-full overflow-hidden p-2 mb-4 ${
                         answers[0] === "perempuan"
-                          ? "ring-4 ring-blue-400 bg-blue-400"
+                          ? "ring-4 ring-pink-400 bg-pink-400"
                           : "ring-2 ring-gray-200 bg-white"
                       }`}
                     >
