@@ -5,6 +5,8 @@ import ROUTES from "@/routes/index.jsx";
 import Cover from "@/pages/Cover.jsx";
 import ChatBot from "@/pages/ChatBot";
 import Survey from "@/pages/Survey.jsx";
+import TestPage from "@/pages/TestPage.jsx";
+
 // import Register from "./pages/Register";
 // import Dashboard from "./pages/Dashboard";
 // import ProtectedRoute from "./routes/ProtectedRoute";
@@ -30,6 +32,7 @@ export default function App() {
       <Route path={ROUTES.LOGIN} element={<Login />} />
       <Route path="/chatbot" element={<ChatBot />} />
       <Route path="/survey" element={<Survey />} />
+      <Route path="/tes" element={<TestPage />} />
       {/* <Route path="/register" element={<Register />} /> */}
       {/* <Route path="/dashboard" element={
           <ProtectedRoute>
