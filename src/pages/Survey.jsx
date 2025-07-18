@@ -226,8 +226,8 @@ export default function Survey() {
             {currentStep === 2 && (
               <input
                 type="text"
-                placeholder="Alasan lainnya..."
-                className="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl text-lg focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 placeholder-gray-400"
+                placeholder="Alasan lainnya...(isi - jika tidak ada)"
+                className="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl  focus:outline-none text-[1rem] focus:border-orange-400 focus:ring-2 focus:ring-orange-200 placeholder-gray-400"
                 value={inputValue2}
                 onChange={(e) => setInputValue2(e.target.value)}
               />
@@ -236,8 +236,8 @@ export default function Survey() {
             {currentStep === 3 && (
               <input
                 type="text"
-                placeholder="Tantangan lainnya..."
-                className="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl text-lg focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 placeholder-gray-400"
+                placeholder="Tantangan lainnya...(isi - jika tidak ada)"
+                className="w-full px-6 py-4 border-2 border-gray-200 rounded-2xl text-[1rem] focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 placeholder-gray-400"
                 value={inputValue3}
                 onChange={(e) => setInputValue3(e.target.value)}
               />

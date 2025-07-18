@@ -39,7 +39,7 @@ export default function LoginForm() {
 
       <div className="w-full">
         <Button
-          className="bg-orangePrimary hover:bg-orangeSecondary cursor-pointer"
+          className="bg-orangePrimary hover:bg-orangeSecondary cursor-pointer w-full py-3 text-white rounded-lg"
           onClick={(e) => {
             e.preventDefault();
             navigate("/survey");
