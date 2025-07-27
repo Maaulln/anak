@@ -10,7 +10,7 @@ import ChatBot from "@/pages/ChatBot";
 import Survey from "@/pages/Survey.jsx";
 import TestPage from "@/pages/TestPage.jsx";
 
-import Konsultan from "@/pages/Konsultan.jsx";
+import Redeem from "@/pages/Redeem.jsx";
 import Progres from "@/pages/Progres.jsx";
 import Profile from "@/pages/Profile.jsx";
 // import Register from "./pages/Register";
@@ -39,7 +39,7 @@ export default function App() {
       <Route path="/chatbot" element={<ChatBot />} />
       <Route path="/survey" element={<Survey />} />
       <Route path="/Home" element={<Home />} />
-      <Route path="/Konsultan" element={<Konsultan />} />
+      <Route path="/Redeem" element={<Redeem />} />
       <Route path="/Progres" element={<Progres />} />
       <Route path="/Profile" element={<Profile/>}/>
       <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />

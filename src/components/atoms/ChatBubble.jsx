@@ -15,6 +15,7 @@ export default function ChatBubble({ sender, text, isOwn }) {
 
     // Escape dulu, baru proses markdown
     let processedText = escapeHtml(text);
+    
 
     // Process baris-baris teks satu per satu
     const lines = processedText.split("\n");
@@ -22,6 +23,7 @@ export default function ChatBubble({ sender, text, isOwn }) {
       // Check jika line adalah list item
       if (line.trim().match(/^-\s+(.+)$/)) {
         return line.replace(/^-\s+(.+)$/, "• $1");
+        
       }
       return line;
     });

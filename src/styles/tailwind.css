@@ -6,13 +6,14 @@
 @theme{
   --font-display: "Poppins", "sans-serif";
 
-  --color-orangePrimary: #FF8810;
-  --color-orangeSecondary: #FFE5CE;
+  --color-orangePrimary: #FF8810 ;
+  --color-orangeSecondary: #FFE5CE ;
   --color-bluePrimary: #60B5FF;
-  --color-blueSecondary: #B5DDFF;
+  --color-blueSecondary: #B5DDFF ;
   --color-darkGray: #333333;
   --color-linkBlue: #007BFF;
   --color-grayLabel: #9E9E9E;
   --color-grayPlaceholder: #808080;
-  --color-bar: #E5E5E5;
+  --color-bar: #E5E5E5 ;
+  --color-line: #A2A2A2 ;
 }
