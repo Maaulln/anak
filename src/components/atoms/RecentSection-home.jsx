@@ -12,55 +12,50 @@ export default function RecentSection() {
     {
       id: 1,
       name: "Kognitif",
-      progress: 3,
-      total: 10,
+      description: "Kognitif adalah proses pengetahuan dan penciptaan konsep",
       icon: (
         <img src={Kognitif} alt="" />
       ),
-      bgColor: "bg-blue-500",
-      progressColor: "bg-blue-500",
       cardBg: "bg-blue-100",
-      shadow: "blue"
+      shadow: "blue",
+      textcolor: "text-blue-600",
+      subtextcolor: "text-blue-400"
     },
     {
       id: 2,
       name: "Linguistik",
-      progress: 7,
-      total: 10,
+      description: "Linguistik adalah proses mempelajari bahasa dan bahasa alami",
       icon: (
         <img src={Linguistik} alt="" />
       ),
-      bgColor: "bg-orange-500",
-      progressColor: "bg-orange-500",
       cardBg: "bg-orange-100",
-      shadow: "orange"
+      shadow: "orange",
+      textcolor: "text-orange-600",
+      subtextcolor: "text-orange-400"
     },
     {
       id: 3,
       name: "Kepribadian",
-      progress: 5,
-      total: 10,
+      description: "Kepribadian adalah proses mempelajari karakter dan karakteristik orang",
       icon: (
         <img src={Kepribadian} alt="" />
       ),
-      bgColor: "bg-purple-500",
-      progressColor: "bg-purple-500",
       cardBg: "bg-purple-100",
-      shadow: "purple"
+      shadow: "purple",
+      textcolor: "text-purple-600",
+      subtextcolor: "text-purple-400"
     },
     {
       id: 4,
       name: "Motorik",
-      progress: 8,
-      total: 10,
+      description: "Motorik adalah proses mempelajari cara bergerak dan berinteraksi",
       icon: (
         <img src={Motorik} alt="" />
       ),
-      bgColor: "bg-green-500",
-      progressColor: "bg-green-500",
-      // score: 100, // Motorik punya score khusus
       cardBg: "bg-green-100",
-      shadow: "green"
+      shadow: "green",
+      textcolor: "text-green-600",
+      subtextcolor: "text-green-400"
     },
   ];
 
@@ -72,38 +67,16 @@ export default function RecentSection() {
       {/* List Recent Activities */}
       <div className="space-y-3">
         {recentActivities.map((activity) => {
-          const progressPercentage = (activity.progress / activity.total) * 100;
           return (
             <div key={activity.id} className={`flex items-center space-x-3 p-3 rounded-xl shadow-lg ${activity.cardBg} shadow-${activity.shadow}`}>
               {/* Icon */}
-              <div className={`w-10 h-10 rounded-xl p-2 ${activity.bgColor} flex items-center justify-center`}>
+              <div className={`w-18 h-10 rounded-full p-0 flex items-center justify-center`}>
                 {activity.icon}
               </div>
-
-              {/* Content */}
               <div className="flex-1">
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="font-medium text-gray-900">{activity.name}</h4>
-                  <span className="text-sm text-gray-600">
-                    {activity.progress}/{activity.total}
-                  </span>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    className={`h-2 rounded-full ${activity.progressColor}`}
-                    style={{ width: `${progressPercentage}%` }}
-                  ></div>
-                </div>
+                <div className={`text-sm font-medium ${activity.textcolor} font-poppins`}>{activity.name}</div>
+                <div className={`text-sm ${activity.subtextcolor} mt-1`}>{activity.description}</div> 
               </div>
-
-              {/* Score Badge (khusus untuk Motorik) */}
-              {activity.score && (
-                <div className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold">
-                  {activity.score}
-                </div>
-              )}
             </div>
           );
         })}

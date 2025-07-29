@@ -63,7 +63,7 @@ export default function CategorySection() {
             key={category.id}
             className="flex flex-col items-center space-y-2 p-3 rounded-xl hover:bg-gray-50 transition-colors"
           >
-            <div className={`w-14 h-14 p-1 rounded-xl bg-blue-300 flex items-center justify-center`}>
+            <div className={`w-16 h-16 p-1 rounded-xl bg-blue-300 flex items-center justify-center`}>
               {category.icon}
             </div>
             <span className="text-xs text-gray-700 text-center font-medium">{category.name}</span>
