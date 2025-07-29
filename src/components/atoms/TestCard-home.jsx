@@ -1,42 +1,47 @@
-import React from 'react';
-import Avatar from "@/assets/img/avatar.png";
-import Avatar1 from "@/assets/img/avatar1.png";
-import Avatar2 from "@/assets/img/avatar2.png";
+import BoyReading from "../../assets/img/dashboard/boy-reading.png";
 
-// Komponen Test Card - Card biru untuk test utama
+// Komponen Test Card - Kartu biru dengan ilustrasi dan tombol "Mulai"
 export default function TestCard() {
   return (
-    <div className="mx-4 mb-6 ">
+    <div className="mx-4 mb-6">
+      {/* Wrapper Card dengan gradient biru */}
       <div className="bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl p-4 text-white relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
 
-        {/* Konten Card */}
+        {/* Ornamen bulat transparan di pojok kanan atas */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16" />
+
+        {/* Konten utama card */}
         <div className="relative z-10">
-          <h2 className="text-xl font-bold mb-2">Test Yuk</h2>
-          <p className="text-blue-100 text-sm mb-4">Ayo cari tahu seberapa hebat kamu..!!!</p>
 
-          {/* Score Section */}
-          <div className="flex items-center space-x-4">
-            {/* Score 84 */}
-            <div className="flex items-center space-x-2">
-              <div className="flex space-x-1">
-                {/* Emoji bisa diganti dengan icon jika perlu */}
-                <img src={Avatar} alt="" className='w-7 h-7 bg-amber-50 rounded-full'/>
-                <img src={Avatar1} alt="" className='w-7 h-7 bg-amber-50 rounded-full'/>
-                <img src={Avatar2} alt="" className='w-7 h-7 bg-amber-50 rounded-full'/>
-                <span className='bg-[#FFD700] w-7 h-7 rounded-full flex items-center justify-center text-[0.8rem]'>4+</span>
-              </div>
+          {/* Baris: Teks + Gambar Ilustrasi */}
+          <div className="flex flex-row justify-between items-start">
+            {/* Teks ajakan */}
+            <div>
+              <h2 className="font-bold mb-2 font-poppins text-3xl">Test Yuk</h2>
+              <p className="text-blue-100 text-sm font-poppins mb-4">
+                Ayo cari tahu seberapa hebat kamu..!!!
+              </p>
             </div>
 
-            {/* Score 90 */}
-            {/* <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">masuk</div> */}
+            {/* Gambar ilustrasi anak membaca */}
+            <div className="relative w-full h-full">
+              <img
+                src={BoyReading}
+                alt="Ilustrasi anak membaca"
+                className="w-30 h-30 absolute -top-8 -right-5 z-20 bg-white rounded-b-[2rem]"
+              />
+            </div>
+          </div>
+
+          {/* Tombol Aksi */}
+          <div className="flex items-center space-x-4 mt-10 ">
             <button
-              className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold absolute bottom-4 right-4 my-[-1rem] shadow-none drop-shadow-[0_6px_12px_rgba(251,146,60,0.5)] cursor-pointer transition duration-200 hover:scale-105"
+              className="bg-orange-500 text-white px-4 py-2 rounded-2xl w-25 h-10 text-sm font-bold absolute bottom-4 right-1   shadow-md transition duration-200 hover:scale-105"
             >
               Mulai
             </button>
           </div>
+
         </div>
       </div>
     </div>
