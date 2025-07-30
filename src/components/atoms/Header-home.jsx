@@ -2,8 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import IconSearch from "@/assets/img/icon-search.svg";
 import Avatar from "@/assets/img/avatar.png";
-import Profile from '@/pages/Profile';
-
 // Komponen Header - Bagian atas dengan greeting dan profile
 export default function Header() {
   const Nama = "Daffa"; // Nama pengguna, bisa diambil dari state atau props

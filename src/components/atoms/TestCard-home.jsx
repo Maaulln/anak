@@ -28,7 +28,7 @@ export default function TestCard() {
               <img
                 src={BoyReading}
                 alt="Ilustrasi anak membaca"
-                className="w-30 h-30 absolute -top-8 -right-5 z-20 bg-white rounded-b-[2rem]"
+                className="w-30 h-30 absolute -top-8 -right-5 z-20  bg-white rounded-b-[2rem] rounded-tl-[3rem]"
               />
             </div>
           </div>
