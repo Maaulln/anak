@@ -21,11 +21,11 @@ export default function MainLayout({ children }) {
   return (
     <>
       <div className="pb-20">{children}</div>
-      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm bg-white border-t border-gray-200 z-50">
+      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full lg:max-w-sm sm:w-full bg-white border-t border-gray-200 z-50">
         <div className="flex justify-around py-2">
           <button
             onClick={() => {navigate("/home")}}
-            className={`flex flex-col items-center py-2 px-4 ${
+            className={`flex flex-col items-center py-2 px-4 hover:scale-110 cursor-pointer ${
               activeTab === "home" ? "text-orangePrimary" : "text-line"
             }`}
           >
@@ -34,7 +34,7 @@ export default function MainLayout({ children }) {
           </button> 
           <button
             onClick={() => {navigate("/redeem")}}
-            className={`flex flex-col items-center py-2 px-4 ${
+            className={`flex flex-col items-center  py-2 px-4 hover:scale-110 cursor-pointer ${
               activeTab === "redeem" ? "text-orangePrimary" : "text-line"
             }`}
           > 
@@ -45,7 +45,7 @@ export default function MainLayout({ children }) {
           </button>
         <button
         onClick={() => {navigate("/progres")}}
-        className={`relative flex flex-col items-center py-2 px-4 overflow-hidden ${
+        className={`relative flex flex-col items-center  py-2 px-4 overflow-hidden hover:scale-115 cursor-pointer ${
           activeTab === "progres" ? "text-orangePrimary" : "text-line"
         }`}
         >
@@ -54,7 +54,7 @@ export default function MainLayout({ children }) {
           </button>
           <button
             onClick={() => {navigate("/profile")}}
-            className={`flex flex-col items-center py-2 px-4 ${
+            className={`flex flex-col  items-center py-2 px-4 hover:scale-110 cursor-pointer ${
               activeTab === "profile" ? "text-orangePrimary" : "text-line"
             }`}
           >
