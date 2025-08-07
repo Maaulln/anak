@@ -7,6 +7,7 @@ import Pensil from "@/assets/img/reedem/pensil.jpg"
 import Sepatu from "@/assets/img/reedem/sepatu.png"
 import CartIconRedeem from "@/components/atoms/cart-icon-reedem"
 import Koin from "@/assets/img/koin.png"
+import ArrowButton from "../components/atoms/arrow-button";
 
 
 
@@ -56,12 +57,13 @@ export default function Konsultan() {
     <div className="flex justify-center">
       <div className="flex flex-col items-center justify-center w-full h-full bg-[#F0F8FF]">
         <div className="tagname mt-9 flex flex-wrap gap-20 justify-end ">
-          <div className="flex">
-          <CartIconRedeem />
-          <h2 className="font-bold text-[#46A5F5] font-poppins">tukarkan poinmu</h2>
+          <div className="ml-0">
+          <ArrowButton className="text-blue-500" />
           </div>
-          <div className="ml-15">
-            <h1>==</h1>
+          <div className="flex">
+          <h2 className="font-bold text-[#46A5F5] font-poppins mr-3.5">tukarkan poinmu!</h2>
+          <CartIconRedeem/>
+
           </div>
         </div>
         <div className="flex justify-between mt-2.5">

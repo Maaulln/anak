@@ -1,0 +1,8 @@
+export default function ArrowButton(props) {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" className="text-current" xmlns="http://www.w3.org/2000/svg" {...props}>
+<path d="M14.2969 23.4375L5.85938 15L14.2969 6.5625M7.03125 15H24.1406" stroke="#218EE7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
