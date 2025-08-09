@@ -4,7 +4,7 @@ import Avatar from "@/assets/img/avatar.png"
 import Level from "@/assets/img/level.png"
 import EyesProfile from "@/components/atoms/Eyesprofile";
 import ParentIcon from "@/components/atoms/Parent-icon";
-import LogoutProfile from "@/components/atoms/Logout-profile";
+import Logout from "@/components/atoms/Logout-profile";
 import Koin from "@/assets/img/koin.png"
 import SettingProfile from "@/components/atoms/Setting-profile";
 
@@ -13,8 +13,9 @@ export default function Profile() {
   const Points = 4500;
   const Teman = 10;
   return (
-    <div className="w-[425px] h-[852px] bg-[#FF8810] mx-auto flex items-center justify-center flex-col">
-      <p className="mt-[3rem] text-amber-50 font-poppins font-bold">profle</p>
+    <div className="w-full h-[852px] bg-[#FF8810] mx-auto flex items-center justify-center flex-col lg:w-[425px]">
+
+      <p className="mt-[3rem] text-amber-50 font-poppins font-bold">Profile</p>
       {/* Container putih dalam dengan radius atas */}
       <div className="bg-white w-full h-full rounded-t-[2rem] pt-6 px-6 flex flex-col items-center mt-[1rem]">
         
@@ -75,10 +76,10 @@ export default function Profile() {
 
         {/* Tombol Keluar */}
         <div className="bg-white w-full rounded-xl p-4 flex items-center gap-3 shadow-md hover:scale-105 cursor-pointer">
-          <LogoutProfile className="w-9 h-9 p-1 bg-orange-100 rounded-full"/>
+          <Logout className="w-9 h-9 p-1 bg-orange-100 rounded-full" stroke="#FF8810"/>
           <p className="font-bold text-orangePrimary" onClick={() => navigate("/login")}>Keluar</p>
         </div>
-      <MainLayout/>
+      <MainLayout />
       </div>
     </div>
   );

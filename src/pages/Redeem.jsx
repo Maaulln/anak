@@ -7,7 +7,7 @@ import Pensil from "@/assets/img/reedem/pensil.jpg"
 import Sepatu from "@/assets/img/reedem/sepatu.png"
 import CartIconRedeem from "@/components/atoms/cart-icon-reedem"
 import Koin from "@/assets/img/koin.png"
-import ArrowButton from "../components/atoms/arrow-button";
+import ArrowButton from "@/components/atoms/arrow-button";
 
 
 
@@ -62,7 +62,8 @@ export default function Konsultan() {
           </div>
           <div className="flex">
           <h2 className="font-bold text-[#46A5F5] font-poppins mr-3.5">tukarkan poinmu!</h2>
-          <CartIconRedeem/>
+          <CartIconRedeem fill="#41A1F3" />
+
 
           </div>
         </div>

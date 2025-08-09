@@ -9,10 +9,12 @@ import Home from "@/pages/Home.jsx";
 import ChatBot from "@/pages/ChatBot";
 import Survey from "@/pages/Survey.jsx";
 import TestPage from "@/pages/TestPage.jsx";
-
 import Redeem from "@/pages/Redeem.jsx";
 import Progres from "@/pages/Progres.jsx";
 import Profile from "@/pages/Profile.jsx";
+import HomeParent from "./pages/Home-Parent";
+import Anak from "./pages/Anak.jsx";
+import Pengaturan from "./pages/Pengaturan.jsx";
 // import Register from "./pages/Register";
 // import Dashboard from "./pages/Dashboard";
 // import ProtectedRoute from "./routes/ProtectedRoute";
@@ -42,6 +44,9 @@ export default function App() {
       <Route path="/Redeem" element={<Redeem />} />
       <Route path="/Progres" element={<Progres />} />
       <Route path="/Profile" element={<Profile/>}/>
+      <Route path="/Home-Parent" element={<HomeParent />} />
+      <Route path="/Anak" element={<Anak />} />
+      <Route path="/pengaturan" element={<Pengaturan />} />
       <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />
       {/* <Route path="/register" element={<Register />} /> */}
       {/* <Route path="/dashboard" element={
