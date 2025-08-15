@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import IconSearch from "@/assets/img/icon-search.svg";
 import Avatar from "@/assets/img/avatar.png";
 // Komponen Header - Bagian atas dengan greeting dan profile
@@ -10,15 +10,15 @@ export default function Header() {
     <div className="flex items-center justify-between p-4 bg-white">
       <div>
         <p className="text-sm text-gray-600">Selamat Datang</p>
-        <h1 className="text-lg font-bold text-gray-900">{Nama}</h1>
+        <h1 className="text-xl font-bold text-gray-900">{Nama} !</h1>
       </div>
       <div className="flex items-center space-x-3">
         <button className="mx-0 rounded-full ">
-          <img src={IconSearch} alt="" className='pt-4 cursor-pointer' />
+          <img src={IconSearch} alt="" className="pt-4 cursor-pointer" />
         </button>
-        {/* Profile Avatar */}
+        {/* Profile Avatar with orange border */}
         <div
-          className="w-10 h-10 rounded-full overflow-hidden bg-grayLabel cursor-pointer"
+          className="w-12 h-12 rounded-full overflow-hidden border-2 border-orange-500 cursor-pointer"
           onClick={() => navigate("/profile")}
         >
           <img
