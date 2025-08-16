@@ -1,9 +1,12 @@
 import { FcGoogle } from 'react-icons/fc';
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "@/firebase/firebaseConfig";
+import { useNavigate } from "react-router-dom";
+import ROUTES from "@/routes";
 
 export default function GoogleButton({ type = "masuk", onClick }) {
   const isRegister = type === "daftar";
+  const navigate = useNavigate();
 
   const handleGoogleAuth = async () => {
     const provider = new GoogleAuthProvider();
@@ -11,7 +14,8 @@ export default function GoogleButton({ type = "masuk", onClick }) {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       console.log("User Info:", user);
-      alert(`Selamat datang, ${user.displayName}!`);
+      // Redirect ke halaman survey setelah berhasil login/daftar
+      navigate(ROUTES.SURVEY);
     } catch (error) {
       console.error("Error during authentication:", error);
       alert("Autentikasi gagal. Silakan coba lagi.");
