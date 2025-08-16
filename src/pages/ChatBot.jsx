@@ -4,6 +4,7 @@ import ChatInputBar from "@/components/molecules/ChatInputBar";
 import ChatLayout from "@/components/layout/ChatLayout";
 import Avatar from "@/assets/img/bot.png";
 import { useState, useRef } from "react";
+import { sendMessageToWebhook } from "@/services/chatService";
 
 export default function ChatBot() {
   const [messages, setMessages] = useState([]);
@@ -20,61 +21,18 @@ export default function ChatBot() {
     console.log(`Sending message with session ID: ${sessionId}`);
 
     try {
-      const response = await fetch(
-        "https://maaulln.app.n8n.cloud/webhook/anak",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            message: text,
-            sender: "Daffa",
-            sessionId: sessionId,
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            text: `Server error: ${response.status} ${response.statusText}`,
-            sender: "Kiki",
-            isOwn: false,
-          },
-        ]);
-        return;
-      }
-
-      const textResponse = await response.text();
-      if (!textResponse) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            text: "Maaf, server tidak mengirim balasan.",
-            sender: "Kiki",
-            isOwn: false,
-          },
-        ]);
-        return;
-      }
-
-      // Treat response as plain text
-      const replyText =
-        textResponse.trim() || "Maaf, belum ada balasan dari Kiki.";
+      const replyText = await sendMessageToWebhook(text, sessionId);
       const botMessage = {
-        text: replyText,
+        text: replyText || "Maaf, belum ada balasan dari Kiki.",
         sender: "Kiki",
         isOwn: false,
       };
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
-      console.error("Gagal mengambil balasan:", error);
       setMessages((prev) => [
         ...prev,
         {
-          text: "Oops! Terjadi kesalahan saat menghubungi Kiki.",
+          text: error.message || "Oops! Terjadi kesalahan saat menghubungi Kiki.",
           sender: "Kiki",
           isOwn: false,
         },
