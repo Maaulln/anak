@@ -1,4 +1,3 @@
-import React from "react";
 import MainLayout from "@/components/layout/MainLayout";
 import Header from "@/components/atoms/header-home";
 import RecentSection from "@/components/atoms/RecentSection-home";
@@ -12,7 +11,7 @@ export default function Home() {
       {/* Header Component */}
       <Header />
       {/* Test Card Component */}
-      <TestCard />
+      <TestCard/>
       {/* Category Section Component */}
       <CategorySection />
       {/* Recent Section Component */}

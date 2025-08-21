@@ -7,7 +7,7 @@ import ParentIcon from "@/components/atoms/Parent-icon";
 import Logout from "@/components/atoms/Logout-profile";
 import Koin from "@/assets/img/koin.png"
 import SettingProfile from "@/components/atoms/Setting-profile";
-
+import RedeemIcon from "@/components/atoms/redeem-icon";
 export default function Profile() {
   const navigate = useNavigate();
   const Points = 4500;
@@ -62,22 +62,29 @@ export default function Profile() {
           </div>
         </div>
 
-        {/* Tombol Orang Tua */}
-        <div className="bg-white w-full rounded-xl p-4 mb-3 flex items-center gap-3 shadow-md hover:scale-105 cursor-pointer">
-          <ParentIcon className="w-9 h-9 p-1 bg-orange-100 rounded-full"/>
-          <p className="font-bold text-orangePrimary">Orang Tua</p>
+        <div className="w-full bg-[#F1DDF6] rounded-2xl">
+          {/* Tombol Orang Tua */}
+        <div className="bg-[#F1DDF6] w-full rounded-xl p-4 mb-3 flex items-center gap-3 shadow-md hover:scale-105 cursor-pointer">
+          <ParentIcon className="w-9 h-9 p-1 bg-orange-100 rounded-full" fill="#AE58F4"/>
+          <p className="font-bold text-[#AE58F4]">Orang Tua</p>
         </div>
 
         {/* Tombol Setting */}
-        <div className="bg-white w-full rounded-xl p-4 flex items-center gap-3 shadow-md hover:scale-105 cursor-pointer">
+        <div className="bg-[#F1DDF6] w-full rounded-xl p-4 flex items-center gap-3 shadow-md hover:scale-105 cursor-pointer">
           <SettingProfile className="w-9 h-9 p-1 bg-orange-100 rounded-full"/>
-          <p className="font-bold text-orangePrimary">Setting</p>
+          <p className="font-bold text-[#AE58F4]">Setting</p>
+        </div>
+        {/* tombol redeem */}
+        <div className="bg-[#F1DDF6] w-full rounded-xl p-4 flex items-center gap-3 shadow-md hover:scale-105 cursor-pointer">
+          <RedeemIcon className="w-9 h-9 p-1 bg-orange-100 rounded-full"/>
+          <p className="font-bold text-[#AE58F4]">Redeem</p>
         </div>
 
         {/* Tombol Keluar */}
-        <div className="bg-white w-full rounded-xl p-4 flex items-center gap-3 shadow-md hover:scale-105 cursor-pointer">
-          <Logout className="w-9 h-9 p-1 bg-orange-100 rounded-full" stroke="#FF8810"/>
-          <p className="font-bold text-orangePrimary" onClick={() => navigate("/login")}>Keluar</p>
+        <div className="bg-[#F1DDF6] w-full rounded-xl p-4 flex items-center gap-3 shadow-md hover:scale-105 cursor-pointer">
+          <Logout className="w-9 h-9 p-1 bg-orange-100  rounded-full" stroke="#AE58F4"/> 
+          <p className="font-bold text-[#AE58F4]" onClick={() => navigate("/login")}>Keluar</p>
+        </div>
         </div>
       <MainLayout />
       </div>

@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 // import { Home, Users, BarChart3, User } from "lucide-react";
 import HomeIcon from "@/components/atoms/Home-icon";
-import RedeemIcon from "@/components/atoms/redeem-icon";
 import ProgresIcon from "@/components/atoms/progres-icon";
 import ProfileIcon from "@/components/atoms/profile-icon";
+import ConsultanIcon from "../atoms/Consultan-icon";
 
 export default function MainLayout({ children }) {
   const navigate = useNavigate();
   const location = useLocation();
   const getActiveTab = () => {
   if (location.pathname === "/" || location.pathname === "/home") return "home";
-  if (location.pathname === "/redeem") return "redeem";
+  if (location.pathname === "/consultan") return "consultan";
   if (location.pathname === "/progres") return "progres";
   if (location.pathname === "/profile") return "profile";
   return "";
@@ -33,15 +33,15 @@ export default function MainLayout({ children }) {
             <span className="text-xs">Beranda</span>
           </button> 
           <button
-            onClick={() => {navigate("/redeem")}}
+            onClick={() => {navigate("/consultan")}}
             className={`flex flex-col items-center  py-2 px-4 hover:scale-110 cursor-pointer ${
-              activeTab === "redeem" ? "text-orangePrimary" : "text-line"
+              activeTab === "consultan" ? "text-orangePrimary" : "text-line"
             }`}
           > 
-            <RedeemIcon/>
+            <ConsultanIcon/>
             <span className={`text-xs ${
-              activeTab === "redeem" ? "text-orangePrimary" : "text-line"
-            }`}>Redeem</span>
+              activeTab === "consultan" ? "text-orangePrimary" : "text-line"
+            }`}>Consultan</span>
           </button>
         <button
         onClick={() => {navigate("/progres")}}
