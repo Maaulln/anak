@@ -1,5 +1,5 @@
 import BoyReading from "@/assets/img/dashboard/boy-reading.png";
-import CardTest from "@/atoms/CardTest";
+import CardTest from "../atoms/CardTest.jsx";
 
 // Komponen Test Card - Kartu biru dengan ilustrasi dan tombol "Mulai"
 export default function TestCard() {
