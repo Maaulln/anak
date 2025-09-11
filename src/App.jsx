@@ -16,6 +16,7 @@ import HomeParent from "@/pages/Home-Parent";
 import Anak from "@/pages/Anak.jsx";
 import Pengaturan from "@/pages/Pengaturan.jsx";
 import Consultan from "@/pages/Consultan.jsx";
+import InfoDokter from "./pages/InfoDokter.jsx";
 // import Register from "./pages/Register";
 // import Dashboard from "./pages/Dashboard";
 // import ProtectedRoute from "./routes/ProtectedRoute";
@@ -49,6 +50,7 @@ export default function App() {
       <Route path="/Anak" element={<Anak />} />
       <Route path="/pengaturan" element={<Pengaturan />} />
       <Route path="/consultan" element={<Consultan />} />
+      <Route path="/infodokter/:name" element={<InfoDokter />} />
       <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />
       {/* <Route path="/register" element={<Register />} /> */}
       {/* <Route path="/dashboard" element={
